@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Mono', 'IBM Plex Mono', monospace;
+    background-color: #000;
+    color: #fff;
+    cursor: crosshair;
+}
+
+.terminal-root {
+    font-family: 'Space Mono', 'IBM Plex Mono', monospace;
+    background-color: #000;
+    color: #fff;
+    cursor: crosshair;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.dot-grid {
+    background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.05;
+}
+
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.orbital-ring {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    font-style: normal;
+    display: inline-block;
+}
+
+.nav-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #888;
+    transition: color 0.075s, background-color 0.075s;
+    padding-bottom: 4px;
+}
+
+.nav-link:hover {
+    color: #000;
+    background: #fff;
+}
+
+.nav-link.active {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.hero-btn-primary {
+    border: 1px solid #fff;
+    padding: 12px 32px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+    background: transparent;
+    cursor: crosshair;
+    text-decoration: none;
+    transition: background 0.075s, color 0.075s;
+    font-family: 'Space Mono', monospace;
+}
+
+.hero-btn-primary:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hero-btn-secondary {
+    padding: 12px 32px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #888;
+    background: transparent;
+    cursor: crosshair;
+    text-decoration: none;
+    transition: color 0.15s;
+    font-family: 'Space Mono', monospace;
+}
+
+.hero-btn-secondary:hover {
+    color: #fff;
+}
+
+.project-card {
+    background: #000;
+    padding: 32px;
+    transition: background 0.15s;
+    cursor: crosshair;
+}
+
+.project-card:hover {
+    background: #131313;
+}
+
+.project-card:hover .proj-arrow {
+    color: #fff;
+}
+
+.project-card:hover .proj-tag {
+    color: #fff;
+    border-color: #fff;
+}
+
+.proj-tag {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px 8px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: #888;
+    transition: color 0.15s, border-color 0.15s;
+    font-family: 'Space Mono', monospace;
+}
+
+.proj-arrow {
+    color: #888;
+    transition: color 0.15s;
+}
+
+.skill-item {
+    cursor: default;
+    transition: transform 0.1s;
+}
+
+.skill-item:hover span.skill-name {
+    transform: translateX(4px);
+    display: inline-block;
+}
+
+.contact-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.contact-input::placeholder {
+    color: rgba(136, 136, 136, 0.3);
+}
+
+.contact-textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 100%;
+    resize: none;
+}
+
+.contact-textarea::placeholder {
+    color: rgba(136, 136, 136, 0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 0.75rem;
+    color: #fff;
+    background: transparent;
+    cursor: crosshair;
+    transition: background 0.075s, color 0.075s;
+    font-family: 'Space Mono', monospace;
+}
+
+.submit-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.footer-link {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.15s, transform 0.15s;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+.footer-link:active {
+    transform: translateX(4px);
+}
+
+.portrait-wrapper {
+    border: 1px solid #fff;
+    padding: 8px;
+    position: relative;
+}
+
+.portrait-corner-tl {
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    width: 48px;
+    height: 48px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    opacity: 0.5;
+}
+
+.portrait-corner-br {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    width: 48px;
+    height: 48px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    opacity: 0.5;
+}
+
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-hidden {
+        display: flex !important;
+    }
+
+    .grid-md-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flex-md-row {
+        flex-direction: row !important;
+    }
+
+    .px-md-24 {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .p-md-12 {
+        padding: 3rem;
+    }
+
+    .text-md-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .text-md-8xl {
+        font-size: 6rem;
+        line-height: 1;
+    }
+}
+
+::selection {
+    background: #fff;
+    color: #000;
+}
