@@ -316,6 +316,15 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .submit-btn {
+        white-space: nowrap;
+        font-size: 0.65rem;
+        padding: 10px 12px;
+        width: 100%;
+    }
+}
+
 ::selection {
     background: #fff;
     color: #000;
