@@ -3,14 +3,35 @@ import skills from "../data/skills";
 import projects from "../data/projects";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 export default function Home() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
 
+    const [status, setStatus] = useState(null);
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Message broadcast initiated.");
+
+        emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            {
+                name: form.name,
+                email: form.email,
+                message: form.message,
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+            .then(() => {
+                setStatus("success");
+                setForm({ name: "", email: "", message: "" });
+                setTimeout(() => setStatus(null), 5000);
+            })
+            .catch(() => {
+                setStatus("error");
+                setTimeout(() => setStatus(null), 5000);
+            });
     };
 
     return (
@@ -211,6 +232,16 @@ export default function Home() {
                                     />
                                 </div>
                             </div>
+                            {status === "success" && (
+                                <div style={{ border: "1px solid #fff", padding: "12px 16px", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>
+                                    &gt; TRANSMISSION_SUCCESS // MESSAGE DELIVERED
+                                </div>
+                            )}
+                            {status === "error" && (
+                                <div style={{ border: "1px solid #888", padding: "12px 16px", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#888" }}>
+                                    &gt; TRANSMISSION_FAILED // TRY AGAIN
+                                </div>
+                            )}
                             <button type="submit" className="submit-btn">[ BROADCAST_MESSAGE ]</button>
                         </form>
                     </div>
