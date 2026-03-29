@@ -117,7 +117,7 @@ export default function Home() {
                             <div className="portrait-wrapper">
                                 <img
                                     alt="Portrait"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt-7kwkjy2AttWjDWexfymkn-9fYg10mAz4e7IlL5VKlVnhOYQOljmgi__ILzhTub0ExaBJLrazMqLKKLm8e2WulcQvKqYnnaGCE8uivQPIwiLZaY-RItjSP9-A6x6nAs3Apl0Kli9L5RgTUBeNUhdAhVRdmb8E3faBiynJjejiBIFP39DkGEoFJhbEfti6mCkgiCJfsczECctjejLkgToRXvoMuscA_ROjw0-lH0HejS3BS8VJj3EaP-hN7SSHExLRsB--FZ2sDg"
+                                    src="./images/noenemies.jpg"
                                     style={{ filter: "grayscale(100%) brightness(75%) contrast(125%)", width: "100%", maxWidth: 260, objectFit: "cover", aspectRatio: "1/1", display: "block" }}
                                 />
                             </div>
