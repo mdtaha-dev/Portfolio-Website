@@ -4,7 +4,7 @@ const skills = [
     { id: "Stack.03", name: "FLASK" },
     { id: "Stack.04", name: "TAILWIND CSS" },
     { id: "Stack.05", name: "GCP" },
-    { id: "Stack.06", name: "Cybersecurity Analysis" },
+    { id: "Stack.06", name: "CYBERSECURITY ANALYSIS" },
     { id: "Stack.07", name: "ADOBE AFTER EFFECTS" }
 ];
 
