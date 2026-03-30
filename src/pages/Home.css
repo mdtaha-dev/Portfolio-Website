@@ -273,6 +273,24 @@ body {
     opacity: 0.5;
 }
 
+.proj-links {
+    color: #888;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 16px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+    font-family: 'Space Mono', monospace;
+}
+
+.project-card:hover .proj-links {
+    color: #fff;
+    border-color: #fff;
+}
+
+
 @media (max-width: 767px) {
     .desktop-only {
         display: none !important;

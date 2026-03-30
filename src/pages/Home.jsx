@@ -161,6 +161,25 @@ export default function Home() {
                                         <span key={t} className="proj-tag">{t}</span>
                                     ))}
                                 </div>
+
+                                <div style={{ display: "flex", gap: 12, marginTop: 24 }}>
+                                    <a className="proj-links"
+                                        href={p.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        [ GITHUB ]
+                                    </a>
+                                    {p.liveLink && (
+                                        <a className="proj-links"
+                                            href={p.liveLink}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            [ LIVE ]
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         ))}
                     </div>
